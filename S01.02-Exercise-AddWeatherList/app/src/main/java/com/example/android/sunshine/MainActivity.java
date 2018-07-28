@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         };
         //COMPLETED TODO (4) Append each String from the fake weather data array to the TextView
         for(String prediccionDelDia : climaFalso){
-            this.mClimaSemana.append(prediccionDelDia + "\n \n \n");
+            this.mClimaSemana.append("Bucaramanga, Santander "+prediccionDelDia + "\n \n \n");
         }
     }
 }
