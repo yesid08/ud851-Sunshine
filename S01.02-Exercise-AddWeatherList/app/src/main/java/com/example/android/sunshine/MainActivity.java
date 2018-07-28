@@ -17,20 +17,40 @@ package com.example.android.sunshine;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO (1) Create a field to store the weather display TextView
+    //COMPLETED TODO (1) Create a field to store the weather display TextView
+    private TextView mClimaSemana;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast);
 
-        // TODO (2) Use findViewById to get a reference to the weather display TextView
-
-        // TODO (3) Create an array of Strings that contain fake weather data
-
-        // TODO (4) Append each String from the fake weather data array to the TextView
+        //COMPLETED TODO (2) Use findViewById to get a reference to the weather display TextView
+        this.mClimaSemana = (TextView) findViewById(R.id.tv_weather_data);
+        //COMPLETED TODO (3) Create an array of Strings that contain fake weather data
+        String climaFalso [] = {
+                "Lunes, Despejado - 22° / 28°",
+                "Martes, Tormenta - 12° / 15°",
+                "Miércoles, Nubado - 17° / 22°",
+                "Jueves, Despejado - 24° / 30°",
+                "Viernes, Leve lluvia - 17° / 20°",
+                "Sábado, Despejado - 21° / 25°",
+                "Domingo, Tormenta - 12° / 14°",
+                "Lunes, Despejado - 22° / 28°",
+                "Martes, Tormenta - 12° / 15°",
+                "Miércoles, Nubado - 17° / 22°",
+                "Jueves, Despejado - 24° / 30°",
+                "Viernes, Leve lluvia - 17° / 20°",
+                "Sábado, Despejado - 21° / 25°",
+                "Domingo, Tormenta - 12° / 14°"
+        };
+        //COMPLETED TODO (4) Append each String from the fake weather data array to the TextView
+        for(String prediccionDelDia : climaFalso){
+            this.mClimaSemana.append(prediccionDelDia + "\n \n \n");
+        }
     }
 }
